@@ -1,17 +1,21 @@
-node {
-	stage('Build') {
-	echo "Build"
-         }
+pipeline {
+    agent any
 
-	stage('Test') {
-	echo "Test"
-         }
-
-	stage('Inegration Test') {
-	echo "Integration Test"
-         }
-
-	stage('running')	{
-		echo"Running State"
-	} 
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
 }
