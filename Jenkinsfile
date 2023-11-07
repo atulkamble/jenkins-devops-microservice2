@@ -10,4 +10,8 @@ node {
 	stage('Inegration Test') {
 	echo "Integration Test"
          }
+
+	stage('running')	{
+		echo"Running State"
+	} 
 }
